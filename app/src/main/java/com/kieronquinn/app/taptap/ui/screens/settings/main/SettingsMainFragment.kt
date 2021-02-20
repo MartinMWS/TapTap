@@ -108,13 +108,7 @@ class SettingsMainFragment: BaseSettingsFragment(R.xml.settings_main) {
                     viewModel.onAboutClicked(this@SettingsMainFragment)
                     true
                 }
-                val donateChip = ChipPreference.PreferenceChip(R.color.icon_circle_7, R.string.donate, R.drawable.ic_donate){
-                    viewModel.onDonateClicked(requireContext())
-                }
-                val twitterChip = ChipPreference.PreferenceChip(R.color.icon_circle_8, R.string.twitter, R.drawable.ic_twitter){
-                    viewModel.onTwitterClicked(requireContext())
-                }
-                setChips(arrayOf(donateChip, twitterChip))
+        
             }
         }
     }

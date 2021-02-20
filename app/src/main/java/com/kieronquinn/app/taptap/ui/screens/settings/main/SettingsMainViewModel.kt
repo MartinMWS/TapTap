@@ -32,8 +32,6 @@ class SettingsMainViewModel(private val fileRepository: TapFileRepository): Base
     companion object {
         private val ACCESSIBILITY_SERVICE_COMPONENT = ComponentName(BuildConfig.APPLICATION_ID, TapAccessibilityService::class.java.name)
         val GESTURE_ACCESSIBILITY_SERVICE_COMPONENT = ComponentName(BuildConfig.APPLICATION_ID, TapGestureAccessibilityService::class.java.name)
-        private const val LINK_DONATE = "https://kieronquinn.co.uk/redirect/TapTap/donate"
-        private const val LINK_TWITTER = "https://kieronquinn.co.uk/redirect/TapTap/twitter"
     }
 
     val isAccessibilityServiceEnabled = MutableLiveData<Boolean>()
@@ -174,14 +172,6 @@ class SettingsMainViewModel(private val fileRepository: TapFileRepository): Base
 
     fun onBatteryClicked(fragment: Fragment) = fragment.run {
         fragment.navigate(SettingsMainFragmentDirections.actionSettingsFragmentToModalActivity(R.navigation.nav_graph_modal_battery))
-    }
-
-    fun onDonateClicked(context: Context) = context.run {
-        launchCCT(LINK_DONATE)
-    }
-
-    fun onTwitterClicked(context: Context) = context.run {
-        launchCCT(LINK_TWITTER)
     }
 
     fun onAboutClicked(fragment: Fragment) = fragment.run {

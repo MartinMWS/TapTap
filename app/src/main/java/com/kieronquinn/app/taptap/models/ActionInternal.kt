@@ -154,6 +154,7 @@ data class ActionInternal(val action: TapAction, val whenList : ArrayList<WhenGa
                     TapAction.ALARM_TIMER -> AlarmTimerAction(accessibilityService, action.whenList)
                     TapAction.ALARM_SNOOZE -> AlarmSnoozeAction(accessibilityService, action.whenList)
                     TapAction.SOUND_PROFILER -> SoundProfileAction(accessibilityService, action.whenList)
+                    TapAction.SOUND_PROFILER_MOD -> SoundProfileActionMod(accessibilityService, action.whenList)
                     TapAction.WAKE_DEVICE -> WakeDeviceAction(accessibilityService, action.whenList)
                     TapAction.GOOGLE_VOICE_ACCESS -> GoogleVoiceAccessAction(accessibilityService, action.whenList)
                     TapAction.LAUNCH_SEARCH -> LaunchSearch(accessibilityService, action.whenList)

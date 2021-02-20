@@ -5,7 +5,7 @@ import android.content.Context
 import android.media.AudioManager
 import com.kieronquinn.app.taptap.models.WhenGateInternal
 
-class SoundProfileAction(context: Context, whenList : List<WhenGateInternal>) : ActionBase(context, whenList) {
+class SoundProfileActionMod (context: Context, whenList : List<WhenGateInternal>) : ActionBase(context, whenList) {
     private val audioManager = context.getSystemService(Context.AUDIO_SERVICE) as AudioManager
     private var currentProfileAction = audioManager.ringerMode
 
@@ -23,13 +23,13 @@ class SoundProfileAction(context: Context, whenList : List<WhenGateInternal>) : 
         currentProfileAction = audioManager.ringerMode
         when (currentProfileAction) {
             0 -> {
-                audioManager.ringerMode = 1
+                audioManager.ringerMode = 2
             }
             1 -> {
                 audioManager.ringerMode = 2
             }
             2 -> {
-                audioManager.ringerMode = 0
+                audioManager.ringerMode = 1
             }
         }
     }
